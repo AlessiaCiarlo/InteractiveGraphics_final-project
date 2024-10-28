@@ -434,13 +434,6 @@ function main() {
 		// pulisco i buffer di colore e profondità per il nuovo rendering
 		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-		/*
-		if (chosenAnimation.objects.length < 2) {
-			console.log("Error drawing. At least 2 keyframes must be provided in order to animate");
-			return;
-		}
-		*/
-
 		//se deltaTime non è un numero, lo metto a zero
 		if (isNaN(deltaTime)) {
 			deltaTime = 0;
