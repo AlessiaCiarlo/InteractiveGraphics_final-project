@@ -8,7 +8,7 @@ HOW TO RUN:
 
 Files and directories:
 
-Android: contains the obj and mtl files for the animation (keyframes)
+Android_animation1 and Android_animation2: contain the obj and mtl files for the animations (keyframes)
 
 index.html: html main file. Used to run the code (Live Server from Visual Studio Code)
 
