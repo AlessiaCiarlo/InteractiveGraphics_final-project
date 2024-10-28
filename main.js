@@ -488,23 +488,23 @@ function main() {
 	// QUI SI INIZIA //
 	// creo l'oggetto animazione con i suoi keyframes (objects)
 	let animation1 = new Animation([
-		"Android/staypose.obj",
-		"Android/rightstep.obj",
-		"Android/leftstep.obj",
-		"Android/rightstep.obj",
-		"Android/leftstep.obj",
-		"Android/leftjump.obj",
-		"Android/rightstep.obj",
-		"Android/rightjump.obj"
+		"Android_animation1/staypose.obj",
+		"Android_animation1/rightstep.obj",
+		"Android_animation1/leftstep.obj",
+		"Android_animation1/rightstep.obj",
+		"Android_animation1/leftstep.obj",
+		"Android_animation1/leftjump.obj",
+		"Android_animation1/rightstep.obj",
+		"Android_animation1/rightjump.obj"
 	])
 	let animation2 = new Animation([
-		"Android/leftstep.obj",
-		"Android/rightstep.obj",
-		"Android/falling.obj",
-		"Android/falling_down.obj",
-		"Android/going_up.obj",
-		"Android/going_upper.obj",
-		"Android/staypose.obj"
+		"Android_animation2/leftstep.obj",
+		"Android_animation2/rightstep.obj",
+		"Android_animation2/falling.obj",
+		"Android_animation2/falling_down.obj",
+		"Android_animation2/going_up.obj",
+		"Android_animation2/going_upper.obj",
+		"Android_animation2/staypose.obj"
 	])
 	let animations = [animation1, animation2];
 
