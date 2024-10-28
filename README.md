@@ -16,7 +16,7 @@ main.js: file containing all the javascript code for the animation
 
 webgl-utils.js: standard utilities from google to set up a webgl context
 
-MV.js: matrix/vector package for all the operation 
+MV.js: matrix/vector package for all the operations done in this project
 
 OBJParser: standard parser for complex objects 
 
