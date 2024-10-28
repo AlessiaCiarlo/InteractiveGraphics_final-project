@@ -1,0 +1,128 @@
+﻿<doctype html>
+<html>
+<head>
+<title>CS 4600 - Final Project</title>
+
+
+<style>
+    html {
+        color: rgb(255, 255, 255);
+        background-color: rgba(181, 249, 255, 0.685);
+        font-family: Arial;
+        overflow: hidden;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    input[type=checkbox], label {
+        cursor: hand;
+    }
+    input[type=range] {
+        width: 100%;
+    }
+    input[type=button] {
+        width: 100%;
+        min-width: 9em;
+    }
+    #canvas {
+        display: block;
+        position: absolute;
+        top:  0;
+        left: 0;
+        width:  1200;
+        height: 750;
+    }
+    #canvas-div {
+        position: relative;
+    }
+    .sel {
+        cursor: hand;
+    }
+    #controls-div {
+        vertical-align: top;
+        background-color: #076877;
+        overflow: auto;
+    }
+    #controls {
+        padding: 1em;
+    }
+    .control-group {
+        position: relative;
+        max-width: 25em;
+    }
+    .control {
+        padding: 0.2em;
+    }
+    .control-x {
+        display: none;
+    }
+    .value {
+        float: right;
+        text-align: right;
+        width: 1em;
+    }
+    @media (orientation: landscape) {
+        #canvas-div {
+            display: inline-block;
+            width:  calc(100% - 20em);
+            height: 100%;
+        }
+        #controls-div {
+            display: inline-block;
+            width:   20em;
+            height: 100%;
+        }
+        .control-group {
+            overflow: hidden;
+        }
+        .control-group ~ .control-group {
+            margin-top: 1em;
+        }
+        #texture-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    </style>
+
+    
+    <body>
+    <div id="canvas-div"><canvas id="canvas"></canvas></div><div id="controls-div">
+    <div id="controls">
+    <div class="control"><input type="button" id="Start Animation 1" value="Start Animation 1"></div>
+    <div class="control"><input type="button" id="Start Animation 2" value="Start Animation 2"></div>
+    </div>
+    <div class="control-group">
+    <div class="control">
+        <span id="velocity"></span>
+        <span id="x"></span><span id="y"></span><span id="z"></span>
+        <span id="angleX"></span><span id="angleY"></span><span id="angleZ"></span>
+        <span id="Light_direction_x"></span>
+        <span id="Light_direction_y"></span>
+        <span id="Light_direction_z"></span>
+    </div>
+    <div class="control">
+        <span id="shininess"></span>
+        <span id="emissionValue"></span>
+        <span id="diffuseValue"></span>
+        <span id="specularValue"></span>
+    </div>
+    <div class="control">    
+        <span id="ambient"></span>     
+    </div>
+    <div class="control">
+        <span id="emissionR"></span>
+        <span id="emissionG"></span>
+        <span id="emissionB"></span>
+    </div>
+    
+    <script type="text/javascript" src="MV.js"></script>
+    <script type="text/javascript" src="OBJParser.js"></script>
+    <script type="text/javascript" src="webgl-utils.js"></script>
+    <script type="text/javascript" src="webgl-ui.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>
