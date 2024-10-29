@@ -659,14 +659,6 @@ var meshFS = `
 
 
 /**
-* @param {Element} canvas. The canvas element to create a context from.
-* @return {WebGLRenderingContext} The created context.
-*/
-function setupWebGL(canvas) {
-	return WebGLUtils.setupWebGL(canvas);
-}
-
-/**
  * Provides requestAnimationFrame in a cross browser way.
  */
 
