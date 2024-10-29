@@ -475,6 +475,7 @@ function main() {
 		// frequenza di aggiornamento del display, questo rende le animazioni più 
 		// fluide ed efficienti dal punto di vista delle prestazioni.
 	}
+	
 
 
 	// -------------------------------------------------------- //
@@ -592,7 +593,7 @@ var meshVS = `
 	varying vec3 viewNormal;
 
 	void main() {
-	 	// posizione attuale interpolando le posizioni pos1 e pos2
+	 	// posizione attuale interpolando linearmente le posizioni pos1 e pos2 (pos1 * (1-step) + pos2 * step)
 		vec4 position = mix(vec4(pos1, 1), vec4(pos2, 1), step);
 		// posizione del vertice nello spazio dell'osservatore
 		vec3 viewFragPos = (MV * position).xyz;
@@ -603,7 +604,7 @@ var meshVS = `
 		lightDirection = - lightPosition_viewSpace;
 		// direzione dell'osservatore rispetto alla posizione del vertice nello spazio dell'osservatore
 		viewDirection = - viewFragPos;
-		// interpolazioni delle normali, normalizzazione e trasformazione nello spazio dell'osservatore
+		// interpolazione lineare delle normali, normalizzazione e trasformazione nello spazio dell'osservatore
 		viewNormal = MN * normalize(mix(norm1, norm2, step));
 		
 		// assegno colore al vertice
